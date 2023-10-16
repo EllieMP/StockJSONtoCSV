@@ -1,0 +1,14 @@
+This repository is intended as a work sample for the IT Data Management Position for the Washington State Department of Labor & Industries.
+
+Overview: The function of this project is to take in a JSON file containing a history of daily stock data, calculate the EMA-12, EMA-26, MACD, and signal each day these calculations are possible, and output this information in a CSV file or a JSON file depending on user defined input.  Spreadsheets with visiualizations of sample csv output files for this project can be found below.  Sample JSON output files can be found in the /inpu_andt_output_files directory.
+
+How it works from a programing standpoint:  An object oriented approach was taken for this project.  In short a JSONtokenizer object tokenizes the input JSON file.  Those tokens are then sent to a JSONparser object that first populates key-value pairs, then instances from said pairs, then sets (or days) from those instances.  From there, these sets are passed to a an EquityStats object that calculates the Exponential Moving Average (EMA) across a 12 day and 26 day span, the Moving Average Convergence/Divergence indicator (MACD), and a signal.  Based on options used by the user, this data is then either outputed in JSON format, or csv format.
+
+Output Spreadsheets with visuilizations:
+aapl: https://docs.google.com/spreadsheets/d/19HrvqGok7gvSLPOOz0osK47LX9ixHuyPpTQ4vEtVLzg/edit?usp=sharing
+
+amd: https://docs.google.com/spreadsheets/d/1LhTm-Kbwuzyb9ndAnJngt3a9Uk8B93v-SqxClpNEsl0/edit?usp=sharing
+
+nvda: https://docs.google.com/spreadsheets/d/1UHIbk_3IHtzExP58KSyeYi-lcWna2tQIyytWycUQ1F8/edit?usp=sharing
+
+tsla: https://docs.google.com/spreadsheets/d/1imWuL_rIOnmDfnbfXhCnmPZq_YeMiG9fbrYvE52od58/edit?usp=sharing
